@@ -2,6 +2,7 @@
 .venv-docling/
 *.env
 
+
 # Arquivos gerados pelo Python
 __pycache__/
 *.pyc
@@ -24,10 +25,11 @@ dist/
 *.egg-info/
 *.egg
 
-# Arquivos de saída e logs
+# Arquivos de saída, logs e bancos de dados gerados
 *.log
 *.out
-conversion_results.txt
+output_markdown/
+vector_db/
 
 # Arquivos do sistema operacional
 .DS_Store

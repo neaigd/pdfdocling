@@ -10,30 +10,38 @@ from langchain_groq import ChatGroq
 from langchain.chains import RetrievalQA
 from langchain.prompts import PromptTemplate
 
-def create_qa_system(file_path: str):
-    """Cria e retorna um sistema de Q&A a partir de um arquivo de texto."""
+# --- Configuração de Pastas ---
+VECTOR_DB_DIR = "vector_db"
+DB_FAISS_PATH = os.path.join(VECTOR_DB_DIR, "faiss_index")
+
+def create_and_save_vector_db(file_path: str):
+    """Cria e salva um banco de dados vetorial a partir de um arquivo de texto."""
+    print(f"Criando novo banco de dados vetorial a partir de '{file_path}'...")
+    
     # 1. Carregar o documento
-    loader = TextLoader(file_path)
+    loader = TextLoader(file_path, encoding='utf-8')
     documents = loader.load()
 
     # 2. Dividir o texto em chunks
-    text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=1000,
-        chunk_overlap=200
-    )
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
     docs = text_splitter.split_documents(documents)
 
-    # 3. Criar embeddings usando um modelo que roda em CPU
-    print("Criando embeddings... Isso pode levar um momento.")
+    # 3. Criar embeddings
     embeddings = HuggingFaceEmbeddings(
         model_name="all-MiniLM-L6-v2",
         model_kwargs={'device': 'cpu'}
     )
 
-    # 4. Criar o vector store (banco de dados de vetores) com FAISS
+    # 4. Criar o vector store e salvar localmente
+    os.makedirs(VECTOR_DB_DIR, exist_ok=True)
     vectorstore = FAISS.from_documents(docs, embeddings)
+    vectorstore.save_local(DB_FAISS_PATH)
+    print(f"Banco de dados vetorial salvo em '{DB_FAISS_PATH}'")
+    return vectorstore
 
-    # 5. Criar um template de prompt customizado
+def create_qa_chain(vectorstore):
+    """Cria a cadeia de Q&A usando o banco de dados vetorial fornecido."""
+    # Criar um template de prompt customizado
     prompt_template = """Use os seguintes trechos de contexto para responder à pergunta no final.
 Se você não sabe a resposta, apenas diga que não sabe, não tente inventar uma resposta.
 
@@ -46,13 +54,10 @@ Resposta:"""
         template=prompt_template, input_variables=["context", "question"]
     )
 
-    # 6. Criar a instância do LLM com Groq (usando Llama 3 70B)
-    llm = ChatGroq(
-        model_name="llama3-70b-8192",
-        temperature=0
-    )
+    # Criar a instância do LLM com Groq
+    llm = ChatGroq(model_name="llama3-70b-8192", temperature=0)
 
-    # 7. Criar a cadeia de Q&A (RetrievalQA)
+    # Criar a cadeia de Q&A
     qa_chain = RetrievalQA.from_chain_type(
         llm=llm,
         chain_type="stuff",
@@ -60,43 +65,46 @@ Resposta:"""
         return_source_documents=True,
         chain_type_kwargs={"prompt": PROMPT}
     )
-    
     return qa_chain
 
 def main():
     """Função principal para rodar o sistema de Q&A interativo."""
-    # Carregar variáveis de ambiente do arquivo .env
     load_dotenv()
 
-    # Checar se a chave de API do Groq está configurada
     if not os.getenv("GROQ_API_KEY"):
-        print("Por favor, configure sua GROQ_API_KEY no arquivo .env")
+        print("Erro: Por favor, configure sua GROQ_API_KEY no arquivo .env")
         return
 
-    # Obter o caminho do arquivo do usuário
-    file_path = input("Digite o caminho para o seu arquivo de texto (ex: conversion_results.txt): ")
+    vectorstore = None
+    embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2", model_kwargs={'device': 'cpu'})
 
-    try:
-        print("\nInicializando o sistema de Q&A... Isso pode levar um momento.")
-        qa = create_qa_system(file_path)
-        print("\nQA system ready! Digite 'quit' para sair.")
+    if os.path.exists(DB_FAISS_PATH):
+        print(f"Carregando banco de dados vetorial existente de '{DB_FAISS_PATH}'...")
+        vectorstore = FAISS.load_local(DB_FAISS_PATH, embeddings, allow_dangerous_deserialization=True)
+    else:
+        print("Banco de dados vetorial não encontrado.")
+        markdown_file = input("Digite o caminho para o arquivo Markdown de origem (ex: output_markdown/docling_converted.md): ")
+        if os.path.exists(markdown_file):
+            vectorstore = create_and_save_vector_db(markdown_file)
+        else:
+            print(f"Erro: Arquivo '{markdown_file}' não encontrado. Execute doc.py primeiro.")
+            return
 
-        # Loop interativo
-        while True:
-            question = input("\nDigite sua pergunta: ")
-            if question.lower() == 'quit':
-                break
-            
-            # Obter a resposta
-            response = qa.invoke({"query": question})
-            
-            print("\nResposta:", response['result'])
-            print("\nDocumentos de origem usados:")
-            for i, doc in enumerate(response['source_documents']):
-                print(f"  {i+1}. {doc.page_content[:200]}...")
+    print("\nInicializando o sistema de Q&A...")
+    qa = create_qa_chain(vectorstore)
+    print("\nSistema de Q&A pronto! Digite 'quit' para sair.")
 
-    except Exception as e:
-        print(f"Ocorreu um erro: {e}")
+    while True:
+        question = input("\nDigite sua pergunta: ")
+        if question.lower() == 'quit':
+            break
+        
+        response = qa.invoke({"query": question})
+        
+        print("\nResposta:", response['result'])
+        print("\nDocumentos de origem usados:")
+        for i, doc in enumerate(response['source_documents']):
+            print(f"  {i+1}. {doc.page_content[:200].replace(os.linesep, ' ')}...")
 
 if __name__ == "__main__":
     main()
