@@ -1,6 +1,9 @@
 # Core library for document parsing
 docling
 
+# Library for PDF metadata extraction
+PyMuPDF
+
 # Libraries for the RAG system
 langchain
 langchain-community
@@ -8,6 +11,3 @@ langchain-groq
 sentence-transformers
 faiss-cpu
 python-dotenv
-
-# Opcional, mas útil para desenvolvimento (se você usar notebooks)
-# jupyter

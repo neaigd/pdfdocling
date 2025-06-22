@@ -1,104 +1,76 @@
 
-# Docling: Análise Avançada de PDF e Sistema RAG
+# Docling: Análise Avançada de PDF e Sistema RAG com Preservação de Links
 
-Este projeto demonstra como usar a biblioteca `docling` da IBM para extrair dados estruturados de PDFs e construir um sistema de Perguntas e Respostas (Q&A) com uma arquitetura RAG (Retrieval-Augmented Generation).
+Este projeto demonstra como usar a biblioteca `docling` da IBM, combinada com `PyMuPDF`, para extrair dados estruturados e preservar hiperlinks embutidos de documentos PDF.
 
-O projeto é projetado para rodar inteiramente em CPU, utilizando LangChain, FAISS para armazenamento local de vetores e a API do Groq para inferência ultrarrápida com o modelo Llama 3.
+O objetivo é converter um PDF jurídico em um formato Markdown limpo e, em seguida, usar esse conteúdo para alimentar um sistema de Perguntas e Respostas (Q&A) construído com uma arquitetura RAG (Retrieval-Augmented Generation). O sistema final é capaz de responder a perguntas sobre o conteúdo do documento, mantendo os links de referência para as fontes originais.
 
 ## ✨ Funcionalidades
 
 -   **Estrutura Organizada:** O projeto separa dados de entrada, saídas intermediárias e bancos de dados persistentes.
--   **Conversão de PDF para Markdown:** Utiliza `docling` para analisar a estrutura, layout, tabelas e imagens de um PDF.
--   **Banco de Dados Vetorial Persistente:** Cria um banco de dados FAISS localmente, permitindo inicializações rápidas em usos futuros.
--   **Pipeline RAG Completo:** Implementa um sistema de Q&A de ponta a ponta.
--   **CPU-Only:** Todo o processo foi projetado para rodar em uma CPU comum.
+-   **Conversão com Preservação de Links**: Usa `docling` para a análise de layout e `PyMuPDF` para a extração de hiperlinks, combinando os resultados em um arquivo Markdown rico.
+-   **Extração de Tabelas e Layout**: Mantém a formatação de tabelas e a estrutura visual do documento original.
+-   **Banco de Dados Vetorial Persistente**: Cria um banco de dados FAISS local para inicializações rápidas em usos futuros.
+-   **Pipeline RAG Completo**: Sistema de Q&A construído com LangChain, Groq (Llama 3 70B) e projetado para rodar inteiramente em CPU.
 
 ## 📂 Estrutura do Projeto
 
 ```
 /
 ├── input_pdfs/                 # Coloque seus PDFs de entrada aqui
-│   └── docling.pdf
+│   └── jurisprudencia.pdf
 ├── output_markdown/            # Arquivos Markdown gerados (ignorado pelo .gitignore)
 ├── vector_db/                  # Banco de dados vetorial FAISS (ignorado pelo .gitignore)
 ├── .venv/                      # Ambiente virtual Python
 ├── .env                        # Arquivo para a chave de API do Groq
 ├── .gitignore                  # Arquivos a serem ignorados pelo Git
 ├── requirements.txt            # Dependências do projeto
-├── doc.py                      # Script para converter PDF -> Markdown
+├── doc_advanced.py             # Script para converter PDF -> Markdown com links
 └── rag.py                      # Script para rodar o sistema de Q&A (RAG)
 ```
 
 ## ⚙️ Configuração e Instalação
 
-### 1. Pré-requisitos
-- Python 3.9 ou superior.
-
-### 2. Clone o Repositório e Crie as Pastas
-```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
-mkdir input_pdfs output_markdown vector_db
-# Mova seu arquivo PDF para a pasta input_pdfs
-mv seu_arquivo.pdf input_pdfs/
-```
-
-### 3. Crie e Ative um Ambiente Virtual
-- **Windows:**
-  ```bash
-  python -m venv .venv
-  .\.venv\Scripts\activate
-  ```
-- **macOS/Linux:**
-  ```bash
-  python3 -m venv .venv
-  source .venv/bin/activate
-  ```
-
-### 4. Instale as Dependências
-```bash
-pip install -r requirements.txt
-```
-
-### 5. Configure sua Chave de API
-1.  Obtenha uma chave de API gratuita em [https://console.groq.com/keys](https://console.groq.com/keys).
-2.  Crie um arquivo chamado `.env` na raiz do projeto.
-3.  Adicione sua chave ao arquivo da seguinte forma:
+1.  **Clone o Repositório e Crie as Pastas**:
+    ```bash
+    git clone https://github.com/seu-usuario/seu-repositorio.git
+    cd seu-repositorio
+    mkdir input_pdfs
     ```
-    GROQ_API_KEY="SUA_CHAVE_API_AQUI"
+    Coloque seu arquivo `jurisprudencia.pdf` dentro da pasta `input_pdfs`.
+
+2.  **Crie e Ative um Ambiente Virtual**:
+    -   Windows: `python -m venv .venv` e `.\.venv\Scripts\activate`
+    -   macOS/Linux: `python3 -m venv .venv` e `source .venv/bin/activate`
+
+3.  **Instale as Dependências**:
+    ```bash
+    pip install -r requirements.txt
     ```
+
+4.  **Configure sua Chave de API do Groq**:
+    -   Obtenha uma chave em [https://console.groq.com/keys](https://console.groq.com/keys).
+    -   Crie um arquivo `.env` e adicione a linha: `GROQ_API_KEY="SUA_CHAVE_API_AQUI"`.
 
 ## 🚀 Como Executar
 
-O fluxo de trabalho agora é mais robusto.
-
-### Etapa 1: Converter o PDF para Markdown
-Execute o script `doc.py`. Ele irá procurar por `docling.pdf` na pasta `input_pdfs` e salvar o resultado em `output_markdown`.
+### Etapa 1: Converter o PDF (com Links)
+Execute o script `doc_advanced.py`. Ele irá processar o PDF da pasta `input_pdfs` e salvará um novo arquivo Markdown com os links preservados na pasta `output_markdown`.
 ```bash
-python doc.py
+python doc_advanced.py
 ```
-Isso criará o arquivo `output_markdown/docling_converted.md`.
 
 ### Etapa 2: Iniciar o Sistema de Perguntas e Respostas (RAG)
 Execute o script `rag.py`.
 ```bash
 python rag.py
 ```
-
--   **Na primeira execução:** O script não encontrará um banco de dados vetorial. Ele pedirá o caminho para o arquivo Markdown gerado:
+-   **Na primeira execução**, o script não encontrará um banco de dados vetorial. Ele pedirá o caminho para o arquivo Markdown. Digite:
     ```
-    Digite o caminho para o arquivo Markdown de origem (ex: output_markdown/docling_converted.md): output_markdown/docling_converted.md
+    output_markdown/jurisprudencia_with_links.md
     ```
-    Ele então criará o banco de dados vetorial e o salvará na pasta `vector_db/`.
+    Ele criará o banco de dados vetorial na pasta `vector_db/`.
 
--   **Em execuções futuras:** O script detectará e carregará automaticamente o banco de dados vetorial da pasta `vector_db/`, tornando a inicialização muito mais rápida.
+-   **Em execuções futuras**, ele carregará automaticamente o banco de dados existente, agilizando a inicialização.
 
-Após a inicialização, você pode começar a fazer perguntas ao chatbot. Para sair, digite `quit`.
-
-### Exemplo de Interação
-
-```
-Digite sua pergunta: what is docling?
-
-Resposta: Based on the provided context, Docling is a tool that converts PDF documents to JSON or Markdown format, and it can also extract metadata from the document, such as title, authors, and language. Additionally, it can understand detailed page layout, reading order, locate figures, and recover table structures. It can also optionally apply OCR (Optical Character Recognition) for scanned PDFs.
-```
+Após a inicialização, você poderá interagir com o chatbot. Para sair, digite `quit`.
