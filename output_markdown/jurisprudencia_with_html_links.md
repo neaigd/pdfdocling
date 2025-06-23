@@ -1,3 +1,7 @@
+---
+share_link: https://share.note.sx/rqfbr86o
+share_updated: 2025-06-22T21:28:35-03:00
+---
 ## Jurisprudência em Teses
 
 ## SUMÁRIO
@@ -6,11 +10,9 @@ JurisprudŒncia em Teses
 
 EDIÇÃO N. 259: DIREITOS DA PESSOA COM TRANSTORNO DO ESPECTRO AUTISTA - TEA 0000 2
 
-<!-- image -->
-
 ## Jurisprudência em Teses
 
-<!-- image -->
+![[STJ.png|200]]
 
 Edição n. 259          Brasília, 19 de maio de 2025
 
@@ -20,7 +22,7 @@ Este periódico não é um repositório oficial de jurisprudência.
 
 ## EDIÇÃO N. 259: DIREITOS DA PESSOA COM TRANSTORNO DO ESPECTRO AUTISTA - TEA
 
-- 1. É abusiva a recusa de cobertura pela operadora do plano de saúde de terapia multidisciplinar, bem como a limitação do número de sessões, aos beneficiários com diagnóstico de Transtorno do Espectro Autista - TEA.
+##  1. É abusiva a recusa de cobertura pela operadora do plano de saúde de terapia multidisciplinar, bem como a limitação do número de sessões, aos beneficiários com diagnóstico de Transtorno do Espectro Autista - TEA.
 
 Veja Proposta de Afetação no Recurso Especial n. 2167050/SP, DJe 26/11/2024. Questão federal afetada: possibilidade ou não de o plano de saúde limitar ou recusar a cobertura de terapia multidisciplinar prescrita ao paciente com transtorno global do desenvolvimento (Tema n. 1295).
 
@@ -58,13 +60,13 @@ Julgados: AgInt no AREsp 2663353/SP,<a href="https://scon.stj.jus.br/SCON/pesqui
 
 TEA
 
-- 6. A pessoa diagnosticada com TEA tem direito a tratamento multidisciplinar no município de residência e ao ressarcimento integral das despesas realizadas em rede não credenciada, na hipótese de inexistência de profissionais conveniados na localidade.
+## 6. A pessoa diagnosticada com TEA tem direito a tratamento multidisciplinar no município de residência e ao ressarcimento integral das despesas realizadas em rede não credenciada, na hipótese de inexistência de profissionais conveniados na localidade.
 
 Veja Proposta de Afetação no Recurso Especial n. 2167050/SP e 2153672/SP, DJe 26/11/2024. Questão federal afetada: possibilidade ou não de o plano de saúde limitar ou recusar a cobertura de terapia multidisciplinar prescrita ao paciente com transtorno global do desenvolvimento (Tema n. 1295).
 
 Julgados: AgInt no REsp 2113334/SC, Rel. Min. HUMBERTO MARTINS, TERCEIRA TURMA, DJEN 12/12/2024; AREsp 2751626/BA<a href="https://scon.stj.jus.br/SCON/pesquisar.jsp?i=1&b=DTXT&O=JT&livre=(ARESP+e+2751626).nome." target="_blank" rel="noopener noreferrer" title="Abrir no navegador"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 5px; display: inline-block;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a> (decisão monocrática), Rel. Min. RAUL ARAÚJO, Quarta Turma, publicado em 06/12/2024; REsp 2007705/SP<a href="https://scon.stj.jus.br/SCON/pesquisar.jsp?i=1&b=DTXT&O=JT&livre=(RESP+e+2007705).nome." target="_blank" rel="noopener noreferrer" title="Abrir no navegador"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 5px; display: inline-block;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a> (decisão monocrática), Rel. Min. MARIA ISABEL GALLOTTI, Quarta Turma, publicado em 03/12/2024; REsp 2178700/PR<a href="https://scon.stj.jus.br/SCON/pesquisar.jsp?i=1&b=DTXT&O=JT&livre=(RESP+e+2178700).nome." target="_blank" rel="noopener noreferrer" title="Abrir no navegador"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 5px; display: inline-block;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a> (decisão monocrática), Rel. Min. MARCO AURÉLIO BELLIZZE, Terceira Turma, publicado em 22/11/2024
 
-- 7. Até 1º/7/2022, início da vigência da Resolução Normativa n. 539/2022 da ANS, o reembolso integral de tratamento multidisciplinar para beneficiários com TEA realizado fora da rede credenciada somente será devido se for descumprida ordem judicial que determine a cobertura ou se for violada obrigação contratual assumida.
+## 7. Até 1º/7/2022, início da vigência da Resolução Normativa n. 539/2022 da ANS, o reembolso integral de tratamento multidisciplinar para beneficiários com TEA realizado fora da rede credenciada somente será devido se for descumprida ordem judicial que determine a cobertura ou se for violada obrigação contratual assumida.
 
 Veja Proposta de Afetação nos Recursos Especiais n. 2167050/SP e 2153672/SP, DJe 26/11/2024. Questão federal afetada: possibilidade ou não de o plano de saúde limitar ou recusar a cobertura de terapia multidisciplinar prescrita ao paciente com transtorno global do desenvolvimento (Tema n. 1295).
 
@@ -72,7 +74,7 @@ Julgados: REsp 2043003/SP,<a href="https://scon.stj.jus.br/SCON/pesquisar.jsp?i=
 
 (Vide Informativo de Jurisprudência N. 769)<a href="https://ww2.stj.jus.br/jurisprudencia/externo/informativo/?aplicacao=informativo&acao=pesquisar&livre=@cnot=&quot;019856&quot;" target="_blank" rel="noopener noreferrer" title="Abrir no navegador"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 5px; display: inline-block;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
 
-- 8. O custeio de tratamento multidisciplinar para beneficiário com Transtorno do Espectro Autista não se estende ao acompanhamento em ambiente escolar ou domiciliar, ou ao acompanhamento realizado por profissional do ensino.
+## 8. O custeio de tratamento multidisciplinar para beneficiário com Transtorno do Espectro Autista não se estende ao acompanhamento em ambiente escolar ou domiciliar, ou ao acompanhamento realizado por profissional do ensino.
 
 Julgados: AREsp 2833886/BA,<a href="https://scon.stj.jus.br/SCON/pesquisar.jsp?i=1&b=ACOR&livre=(('ARESP'.clas.+e+@num='2833886')+ou+('AREsp'+adj+'2833886').suce.)&O=JT" target="_blank" rel="noopener noreferrer" title="Abrir no navegador"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 5px; display: inline-block;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a> Min. MOURA RIBEIRO, TERCEIRA TURMA, DJEN de 23/04/2025; ; AgInt no REsp 2144824/RN,<a href="https://scon.stj.jus.br/SCON/pesquisar.jsp?i=1&b=ACOR&livre=(('AIRESP'.clas.+e+@num='2144824')+ou+('AgInt no REsp'+adj+'2144824').suce.)&O=JT" target="_blank" rel="noopener noreferrer" title="Abrir no navegador"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 5px; display: inline-block;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a> Rel. Min. RICARDO VILLAS BÔAS CUEVA, TERCEIRA TURMA, DJEN 13/12/2024; ; AgInt no REsp 2122472/SP, Rel. Min. HUMBERTO MARTINS, TERCEIRA TURMA, DJe 30/10/2024; ; REsp 2064964/SP, Rel. Min. NANCY ANDRIGHI, TERCEIRA TURMA, DJe 08/03/2024
 
@@ -80,7 +82,7 @@ Julgados: AREsp 2833886/BA,<a href="https://scon.stj.jus.br/SCON/pesquisar.jsp?i
 
 TEA
 
-- 9. É possível suprimir, em caráter excepcional, o exercício do direito à visitação entre avós e neto diagnosticado com TEA, em razão do princípio do melhor interesse do menor.
+## 9. É possível suprimir, em caráter excepcional, o exercício do direito à visitação entre avós e neto diagnosticado com TEA, em razão do princípio do melhor interesse do menor.
 
 Julgados: REsp 1573635/RJ,<a href="https://scon.stj.jus.br/SCON/pesquisar.jsp?i=1&b=ACOR&livre=(('RESP'.clas.+e+@num='1573635')+ou+('REsp'+adj+'1573635').suce.)&O=JT" target="_blank" rel="noopener noreferrer" title="Abrir no navegador"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 5px; display: inline-block;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a> Rel. Min. NANCY ANDRIGHI, TERCEIRA TURMA, DJe 06/12/2018
 
@@ -88,7 +90,7 @@ Julgados: REsp 1573635/RJ,<a href="https://scon.stj.jus.br/SCON/pesquisar.jsp?i=
 
 Julgados: RMS 51424/RJ,<a href="https://scon.stj.jus.br/SCON/pesquisar.jsp?i=1&b=ACOR&livre=(('ROMS'.clas.+e+@num='51424')+ou+('RMS'+adj+'51424').suce.)&O=JT" target="_blank" rel="noopener noreferrer" title="Abrir no navegador"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 5px; display: inline-block;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a> Rel. Min. MAURO CAMPBELL MARQUES, SEGUNDA TURMA, DJe 14/05/2019
 
-- 11. É possível substituir a pena privativa de liberdade, em regime fechado ou semiaberto, por prisão domiciliar para genitores de pessoa com TEA, durante a execução provisória ou definitiva da pena, desde que demonstrada a imprescindibilidade dos cuidados.
+## 11. É possível substituir a pena privativa de liberdade, em regime fechado ou semiaberto, por prisão domiciliar para genitores de pessoa com TEA, durante a execução provisória ou definitiva da pena, desde que demonstrada a imprescindibilidade dos cuidados.
 
 Julgados: AgRg no HC 764603/SC,<a href="https://scon.stj.jus.br/SCON/pesquisar.jsp?i=1&b=ACOR&livre=(('AGRHC'.clas.+e+@num='764603')+ou+('AgRg no HC'+adj+'764603').suce.)&O=JT" target="_blank" rel="noopener noreferrer" title="Abrir no navegador"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 5px; display: inline-block;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a> Rel. Min. REYNALDO SOARES DA FONSECA, QUINTA TURMA, DJe 16/11/2022; HC 943246/SP<a href="https://scon.stj.jus.br/SCON/pesquisar.jsp?i=1&b=DTXT&O=JT&livre=(HC+e+943246).nome." target="_blank" rel="noopener noreferrer" title="Abrir no navegador"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 5px; display: inline-block;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a> (decisão monocrática), Rel. Min. SEBASTIÃO REIS JÚNIOR, Sexta Turma, publicado em 13/09/2024; HC 884708/SP<a href="https://scon.stj.jus.br/SCON/pesquisar.jsp?i=1&b=DTXT&O=JT&livre=(HC+e+884708).nome." target="_blank" rel="noopener noreferrer" title="Abrir no navegador"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 5px; display: inline-block;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a> (decisão monocrática), Rel. Min. JESUÍNO RISSATO (DESEMBARGADOR CONVOCADO DO TJDFT), Sexta Turma, publicado em 20/03/2024
 
