@@ -1,11 +1,3 @@
-Perfeito! A ideia de consolidar tudo em um único `README.md` canônico é a melhor abordagem. Juntei o melhor dos dois mundos: a estrutura narrativa do fluxo de trabalho que você gostou e os detalhes técnicos específicos da versão anterior que são importantes para a documentação.
-
-O resultado é um guia completo que explica o "porquê" (o desafio), o "o quê" (as funcionalidades e a solução) e o "como" (a configuração e o fluxo de trabalho detalhado).
-
----
-
-# README.md (Versão Consolidada e Definitiva)
-
 # Assistente Jurídico RAG: Da Jurisprudência em Teses à Análise de Casos
 
 Este projeto é um pipeline completo de automação para pesquisa e análise jurídica, projetado para transformar as publicações "Jurisprudência em Teses" do STJ em uma base de conhecimento interativa e inteligente.
