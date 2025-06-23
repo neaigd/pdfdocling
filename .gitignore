@@ -28,7 +28,6 @@ dist/
 # Arquivos de saída, logs e bancos de dados gerados
 *.log
 *.out
-output_markdown/
 vector_db/
 
 # Arquivos do sistema operacional
